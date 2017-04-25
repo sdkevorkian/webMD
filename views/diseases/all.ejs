@@ -1,0 +1,10 @@
+<div class="text-center">
+
+    <h1>Disease List</h1>
+    <h2>it's not Lupus</h2>
+<ul class="list-group">
+    <% diseases.forEach(function(disease){ %>
+      <li class="list-group-item"> <a href='/diseases/<%=disease.id%>'><%=disease.name%> </a></li>
+     <% }) %>
+     </ul>
+</div>

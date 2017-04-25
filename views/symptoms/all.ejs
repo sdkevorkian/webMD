@@ -1,0 +1,11 @@
+<div class="text-center">
+    <h1>All Symptoms</h1>
+    <h2>don't pick the scab</h2>
+    <ul class="list-group">
+    <% symptoms.forEach(function(s){ %>
+      <li class="list-group-item"><a href="/symptoms/ <%=s.id%>">
+      <%=s.name %>
+      </a></li>
+      <% }); %>
+      </ul>
+</div>

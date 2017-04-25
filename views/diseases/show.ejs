@@ -1,0 +1,11 @@
+<div class="text-center">
+<h1><%=disease.name %></h1>
+<h2><%=disease.description%></h2>
+<h3>Transmission modes: <%=disease.transmission%>, Severity: <%=disease.severity%></h3>
+<h2>Please call a doctor if you have any of these symptoms:</h2>
+<p>
+    <% disease.symptoms.forEach(function(s){ %>
+        <%=s.name%>
+    <%}); %>
+</p>
+</div>
