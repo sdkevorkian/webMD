@@ -1,0 +1,11 @@
+<div class="text-center">
+<h1><%=symptom.name %></h1>
+<h2><%=symptom.description%></h2>
+<h3>Affected Systems: <%=symptom.affectedSystems%>, Severity: <%=symptom.severity%></h3>
+<h2>You may be afflicted with:</h2>
+<p>
+    <% symptom.diseases.forEach(function(d){ %>
+        <%=d.name%>
+    <%}); %>
+</p>
+</div>

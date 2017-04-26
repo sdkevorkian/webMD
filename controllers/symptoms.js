@@ -22,6 +22,17 @@ router.post('/', function(req, res) {
     });
 });
 
+router.get('/:id', function(req, res) {
+    db.symptom.findOne({
+        where: {
+            id: req.params.id
+        },
+        include: [db.disease]
+    }).then(function(symptom) {
+        res.render('symptoms/show', { symptom: symptom });
+    });
+});
+
 router.get('/add', function(req, res) {
     res.render('symptoms/add');
 });
